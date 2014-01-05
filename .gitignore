@@ -1,0 +1,32 @@
+# !!! WARNING !!!
+# You MUST convert Unity to using Metafiles *before* you start using this .gitignore file, or you WILL lose data!
+
+Library
+Temp
+*.csproj
+*.pidb
+*.unityproj
+*.sln
+*.userprefs
+
+# Visual Studio / MonoDevelop
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+ 
+# OS-generated crap
+*.swp
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
