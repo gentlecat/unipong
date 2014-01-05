@@ -12,6 +12,9 @@ public class BallMovement :MonoBehaviour
 		// Borders	
 		public float BorderTop = 7;
 		public float BorderBottom = -7;
+		public float BorderLeft = -10;
+		public float BorderRight = 10;
+
 
 		void Start ()
 		{
@@ -20,12 +23,17 @@ public class BallMovement :MonoBehaviour
 		}
 
 		void Update ()
-		{
-				if (transform.position.y > BorderTop || transform.position.y < BorderBottom) {
+		{		
+				if (transform.position.x > BorderRight || transform.position.x < BorderLeft) {
+						Vector3 newPos = new Vector3 (0, 0, 0);
+						transform.position = newPos;
+
+				} else if (transform.position.y > BorderTop || transform.position.y < BorderBottom) {
 						Direction.y *= -1;
 				}
 				transform.Translate (Direction * Time.deltaTime);
 		}
+
 		void OnTriggerEnter2D (Collider2D other)
 		{
 				if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) {
