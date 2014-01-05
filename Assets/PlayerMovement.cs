@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-		public float MoveForce = 40f;
-		public float MaxSpeed = 2f;
+public class PlayerMovement : MonoBehaviour
+{
+		public float MoveSpeed = 40f;
 		public string AxisName;
+		public float TopLimit = 7;
+		public float BottomLimit = -7; 
 
-		void Update() {
-				float v = Input.GetAxis(AxisName);
-				if (v * rigidbody2D.velocity.y < MaxSpeed) {
-						rigidbody2D.AddForce(Vector2.up * v * MoveForce);
+		void Update ()
+		{
+				float v = Input.GetAxis (AxisName); 
+				if ((v > 0 && transform.position.y < TopLimit) || (v < 0 && transform.position.y > BottomLimit)) {						
+						transform.Translate (Vector2.up * v * MoveSpeed * Time.deltaTime);
 				}
 		}
 }
