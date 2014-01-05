@@ -26,6 +26,11 @@ public class BallMovement :MonoBehaviour
 				}
 				transform.Translate (Direction * Time.deltaTime);
 		}
-
+		void OnTriggerEnter2D (Collider2D other)
+		{
+				if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) {
+						Direction.x *= -1;
+				}
+		}
 
 }
