@@ -21,8 +21,8 @@ public class BallMovement :MonoBehaviour
 
 		void Start ()
 		{
-				Direction.x = 3;
-				Direction.y = 4;
+				Direction.x = 6;
+				Direction.y = 8;
 		}
 
 		void Update ()
@@ -53,6 +53,7 @@ public class BallMovement :MonoBehaviour
 		{		
 				Vector3 newPos = new Vector3 (0, 0, 0);
 				transform.position = newPos;
+				Direction.x *= -1;
 		}
 
 }
