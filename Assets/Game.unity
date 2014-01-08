@@ -372,8 +372,8 @@ MonoBehaviour:
   ScoreRight: {fileID: 1709555004}
   BorderTop: 7
   BorderBottom: -7
-  BorderLeft: -10
-  BorderRight: 10
+  BorderLeft: -12
+  BorderRight: 12
 --- !u!61 &792762449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -481,6 +481,14 @@ Prefab:
       propertyPath: ScoreRight
       value: 
       objectReference: {fileID: 1709555004}
+    - target: {fileID: 11400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
+      propertyPath: BorderLeft
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
+      propertyPath: BorderRight
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
   m_RootGameObject: {fileID: 792762443}
