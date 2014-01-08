@@ -32,7 +32,7 @@ public class BallMovement :MonoBehaviour
 				goingRight = true;
 		}
 
-		void Update ()
+		void FixedUpdate ()
 		{		
 				// Win detection
 				if (transform.position.x < BorderLeft && !goingRight) { // Right wins			
@@ -42,21 +42,17 @@ public class BallMovement :MonoBehaviour
 						Reset ();
 						ScoreLeft.guiText.text = (int.Parse (ScoreLeft.guiText.text) + 1).ToString ();
 				} 
-
-				float ballHeight = transform.lossyScale.y;
-				if (((transform.position.y + ballHeight / 2) < -Camera.camera.orthographicSize && goingDown) ||
-						((transform.position.y - ballHeight / 2) > Camera.camera.orthographicSize && !goingDown)) {
-						ChangeDirectionY ();
-				}
-				transform.Translate (Direction * Time.deltaTime);
+	
+				rigidbody2D.velocity = Direction;
 		}
-
-		
-		void OnTriggerEnter2D (Collider2D other)
+			
+		void OnCollisionEnter2D (Collision2D other)
 		{
-				// Detecting collision with a player
-				if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) {
+				
+				if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) { // Detecting collision with a player
 						ChangeDirectionX ();
+				} else { // Or border
+						ChangeDirectionY ();
 				}
 		}
 

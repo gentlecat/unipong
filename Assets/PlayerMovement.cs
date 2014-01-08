@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 		public string AxisName;
 		public GameObject Camera;
 
-		void Update ()
+		void FixedUpdate ()
 		{
 				float v = Input.GetAxis (AxisName);
 				float paddleHeight = transform.lossyScale.y;
@@ -15,4 +15,5 @@ public class PlayerMovement : MonoBehaviour
 						transform.Translate (Vector2.up * v * MoveSpeed * Time.deltaTime);
 				}
 		}
+
 }
