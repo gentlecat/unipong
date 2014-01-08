@@ -78,7 +78,7 @@ NavMeshSettings:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 238006196}
@@ -99,7 +99,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 2b84da2cca8377347be59670193f8439,
     type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_Enabled: 1
   m_CastShadows: 1
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100000, guid: 2b84da2cca8377347be59670193f8439,
     type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_Enabled: 1
   m_Material: {fileID: 0}
@@ -133,14 +133,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 2b84da2cca8377347be59670193f8439,
     type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &238006196
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439,
     type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -167,18 +167,18 @@ Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000000, guid: 2b84da2cca8377347be59670193f8439,
     type: 2}
-  m_PrefabInternal: {fileID: 290871623}
+  m_PrefabInternal: {fileID: 399539545}
   m_GameObject: {fileID: 238006192}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!1001 &290871623
+--- !u!1001 &399539545
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -218,25 +218,12 @@ Prefab:
       value: PlayerRight
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: axisName
-      value: player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: AxisName
-      value: PlayerRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -1003283189, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1207259360}
-    - target: {fileID: 5000000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: m_FixedAngle
-      value: 1
+    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+      propertyPath: AxisName
+      value: PlayerRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
@@ -283,26 +270,13 @@ Prefab:
       value: PlayerLeft
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: axisName
-      value: player1
-      objectReference: {fileID: 0}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1207259360}
     - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: AxisName
       value: PlayerLeft
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 266726316, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
-      propertyPath: Camera
-      value: 
-      objectReference: {fileID: 1207259360}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
   m_RootGameObject: {fileID: 1525068569}
@@ -361,7 +335,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -758,7 +732,7 @@ GameObject:
   m_Layer: 0
   m_Name: PlayerLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -839,9 +813,9 @@ Rigidbody2D:
   m_GameObject: {fileID: 1525068569}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
