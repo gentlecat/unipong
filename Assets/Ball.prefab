@@ -97,10 +97,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: {x: 0, y: 0}
-  PlayerRight: {fileID: 0}
   PlayerLeft: {fileID: 0}
+  PlayerRight: {fileID: 0}
+  ScoreLeft: {fileID: 0}
+  ScoreRight: {fileID: 0}
   BorderTop: 7
   BorderBottom: -7
+  BorderLeft: -12
+  BorderRight: 12
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
