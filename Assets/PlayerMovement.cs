@@ -2,15 +2,16 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-		public float MoveSpeed = 40f;
+		public float MoveSpeed = 10f;
 		public string AxisName;
-		public float TopLimit = 7;
-		public float BottomLimit = -7; 
+		public GameObject Camera;
 
 		void Update ()
 		{
-				float v = Input.GetAxis (AxisName); 
-				if ((v > 0 && transform.position.y < TopLimit) || (v < 0 && transform.position.y > BottomLimit)) {						
+				float v = Input.GetAxis (AxisName);
+				float paddleHeight = transform.lossyScale.y;
+				if ((v > 0 && (transform.position.y + paddleHeight / 2) < Camera.camera.orthographicSize) || 
+						(v < 0 && (transform.position.y - paddleHeight / 2) > -Camera.camera.orthographicSize)) {						
 						transform.Translate (Vector2.up * v * MoveSpeed * Time.deltaTime);
 				}
 		}

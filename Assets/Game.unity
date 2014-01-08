@@ -159,9 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 40
-  AxisName: player2
-  TopLimit: 7
-  BottomLimit: -7
+  AxisName: PlayerRight
+  Camera: {fileID: 1207259360}
 --- !u!1001 &290871623
 Prefab:
   m_ObjectHideFlags: 0
@@ -207,13 +206,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: AxisName
-      value: player2
+      value: PlayerRight
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -1003283189, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1207259360}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
   m_RootGameObject: {fileID: 238006192}
@@ -264,13 +267,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: AxisName
-      value: player1
+      value: PlayerLeft
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 266726316, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1207259360}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
   m_RootGameObject: {fileID: 1525068569}
@@ -349,7 +360,7 @@ Transform:
   m_PrefabInternal: {fileID: 2018997416}
   m_GameObject: {fileID: 792762443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .100000001, z: 0}
+  m_LocalPosition: {x: -5, y: 5, z: 0}
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -366,12 +377,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: {x: 0, y: 0}
+  Camera: {fileID: 1207259360}
   PlayerLeft: {fileID: 1525068569}
   PlayerRight: {fileID: 238006192}
   ScoreLeft: {fileID: 1386360136}
   ScoreRight: {fileID: 1709555004}
-  BorderTop: 7
-  BorderBottom: -7
   BorderLeft: -12
   BorderRight: 12
 --- !u!61 &792762449
@@ -756,9 +766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 40
-  AxisName: player1
-  TopLimit: 7
-  BottomLimit: -7
+  AxisName: PlayerLeft
+  Camera: {fileID: 1207259360}
 --- !u!1 &1709555004
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,11 +828,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .100000001
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -861,6 +870,10 @@ Prefab:
       propertyPath: ScoreRight
       value: 
       objectReference: {fileID: 1709555004}
+    - target: {fileID: 11400000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1207259360}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 596cbfd039eae1f4db90b08bb5f4a68a, type: 2}
   m_RootGameObject: {fileID: 792762443}

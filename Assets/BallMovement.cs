@@ -5,6 +5,8 @@ public class BallMovement :MonoBehaviour
 
 		public Vector2 Direction;
 
+		public GameObject Camera;
+
 		// Players
 		public GameObject PlayerLeft;
 		public GameObject PlayerRight;
@@ -13,9 +15,7 @@ public class BallMovement :MonoBehaviour
 		public GameObject ScoreLeft;
 		public GameObject ScoreRight;
 
-		// Borders	
-		public float BorderTop = 7;
-		public float BorderBottom = -7;
+		// Borders
 		public float BorderLeft = -10;
 		public float BorderRight = 10;
 
@@ -43,7 +43,9 @@ public class BallMovement :MonoBehaviour
 						ScoreLeft.guiText.text = (int.Parse (ScoreLeft.guiText.text) + 1).ToString ();
 				} 
 
-				if ((transform.position.y < BorderBottom && goingDown) || (transform.position.y > BorderTop && !goingDown)) {
+				float ballHeight = transform.lossyScale.y;
+				if (((transform.position.y + ballHeight / 2) < -Camera.camera.orthographicSize && goingDown) ||
+						((transform.position.y - ballHeight / 2) > Camera.camera.orthographicSize && !goingDown)) {
 						ChangeDirectionY ();
 				}
 				transform.Translate (Direction * Time.deltaTime);
