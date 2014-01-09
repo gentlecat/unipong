@@ -379,6 +379,7 @@ MonoBehaviour:
   ScoreRight: {fileID: 1709555004}
   BorderLeft: -12
   BorderRight: 12
+  HitSound: {fileID: 8300000, guid: 4f5405184b29a764aae86dd7e809e503, type: 3}
 --- !u!61 &792762449
 BoxCollider2D:
   m_ObjectHideFlags: 0
