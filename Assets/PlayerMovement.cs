@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-		public float MoveSpeed = 10f;
+		public float MoveSpeed = 25f;
 		public string AxisName;
 		public GameObject Camera;
 

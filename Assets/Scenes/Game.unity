@@ -84,9 +84,10 @@ GameObject:
   - 4: {fileID: 238006196}
   - 33: {fileID: 238006195}
   - 23: {fileID: 238006193}
-  - 114: {fileID: 238006197}
   - 61: {fileID: 238006194}
   - 50: {fileID: 238006198}
+  - 114: {fileID: 238006199}
+  - 114: {fileID: 238006197}
   m_Layer: 0
   m_Name: PlayerRight
   m_TagString: Untagged
@@ -150,16 +151,15 @@ Transform:
 --- !u!114 &238006197
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439,
-    type: 2}
-  m_PrefabInternal: {fileID: 399539545}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238006192}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a83798fb1e173445a5023a6e30e243b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 40
+  MoveSpeed: 25
   AxisName: Movement
   Camera: {fileID: 1207259360}
 --- !u!50 &238006198
@@ -178,6 +178,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &238006199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238006192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6371ce75037ea4f86a18f565eda2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 1207259360}
+  Ball: {fileID: 792762443}
+  DefaultMaxSpeed: 10
+  MaxSpeedDeviation: 2
+  SpeedDelta: .5
 --- !u!1001 &399539545
 Prefab:
   m_ObjectHideFlags: 0
@@ -217,11 +233,11 @@ Prefab:
       propertyPath: m_Name
       value: PlayerRight
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+    - target: {fileID: 0}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1207259360}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+    - target: {fileID: 0}
       propertyPath: AxisName
       value: Movement
       objectReference: {fileID: 0}
@@ -269,16 +285,16 @@ Prefab:
       propertyPath: m_Name
       value: PlayerLeft
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+    - target: {fileID: 0}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1207259360}
-    - target: {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+    - target: {fileID: 0}
       propertyPath: AxisName
       value: PlayerLeft
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 11400000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2b84da2cca8377347be59670193f8439, type: 2}
   m_RootGameObject: {fileID: 1525068569}
   m_IsPrefabParent: 0
@@ -804,8 +820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1207259360}
   Ball: {fileID: 792762443}
-  MaxSpeedAbs: 10
-  SpeedDelta: .800000012
+  DefaultMaxSpeed: 10
+  MaxSpeedDeviation: 2
+  SpeedDelta: .5
 --- !u!50 &1525068575
 Rigidbody2D:
   m_ObjectHideFlags: 0
