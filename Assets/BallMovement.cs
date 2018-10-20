@@ -50,10 +50,16 @@ public class BallMovement :MonoBehaviour
 		}
 			
 		void OnCollisionEnter2D (Collision2D other)
-		{				
-				if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) { // Detecting collision with a player
-						ChangeDirectionX ();
-						AudioSource.PlayClipAtPoint (HitSound, transform.position);
+		{
+                		Vector3 dir = (other.gameObject.transform.position - gameObject.transform.position).normalized;
+                		if (other.gameObject == PlayerRight || other.gameObject == PlayerLeft) { // Detecting collision with a player
+						AudioSource.PlayClipAtPoint(HitSound, transform.position);
+                        			if (dir.y > -0.96f && dir.y < 0.96f) // { Detects if ball hits side of a player
+                                				ChangeDirectionX();
+                        			} else { 
+                                				ChangeDirectionY();
+                        			}
+
 				} else { // Or border
 						ChangeDirectionY ();
 				}
